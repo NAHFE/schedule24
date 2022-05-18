@@ -1,6 +1,6 @@
 mod stui;
 
-use libschema::{data, image, Dimensions, RequestError, get_schema, get_schools, get_classes, print_lessons, get_class_guid, get_school_guid, get_lesson_info};
+use libschedule24::{data, image, Dimensions, RequestError, get_schema, get_schools, get_classes, print_lessons, get_class_guid, get_school_guid, get_lesson_info};
 use std::{convert::TryInto, fs::File, io::Write};
 use chrono::{Local, Datelike, NaiveTime};
 use clap::{App, AppSettings, Arg, SubCommand, crate_authors, crate_description, crate_name, crate_version};
@@ -32,7 +32,7 @@ async fn main() {
 }
 
 async fn run_commands() -> Result<(), RequestError> {
-    let cfg: Config = confy::load("schema").unwrap();
+    let cfg: Config = confy::load(env!("CARGO_PKG_NAME")).unwrap();
 
     let day_arg = Arg::with_name("day")
         .short("d")

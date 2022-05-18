@@ -22,7 +22,7 @@ use crossterm::{
     event::{read, KeyEvent, KeyCode},
 };
 
-use libschema::data;
+use libschedule24::data;
 
 /*use termion::{
     raw::IntoRawMode,

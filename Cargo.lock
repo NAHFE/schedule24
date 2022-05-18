@@ -910,9 +910,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
 
 [[package]]
-name = "libschema"
+name = "libschedule24"
 version = "0.1.0"
-source = "git+https://github.com/NAHFE/libschema.git#ec40b63799dda6181308de5ea49730f4e726b29d"
+source = "git+https://github.com/NAHFE/libschedule24.git#a0b6f6b7fe68b4f25829e688893bbc3ba31e30fe"
 dependencies = [
  "async-attributes",
  "async-std",
@@ -1316,23 +1316,23 @@ dependencies = [
 
 [[package]]
 name = "schannel"
-version = "0.1.19"
+version = "0.1.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f05ba609c234e60bee0d547fe94a4c7e9da733d1c962cf6e59efa4cd9c8bc75"
+checksum = "88d6731146462ea25d9244b2ed5fd1d716d25c52e4d54aa4fb0f3c4e9854dbe2"
 dependencies = [
  "lazy_static",
- "winapi",
+ "windows-sys",
 ]
 
 [[package]]
-name = "schema"
+name = "schedule24"
 version = "0.1.0"
 dependencies = [
  "chrono",
  "clap",
  "confy",
  "crossterm 0.22.1",
- "libschema",
+ "libschedule24",
  "serde",
  "serde_json",
  "substring",

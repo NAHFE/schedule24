@@ -1,9 +1,9 @@
 [package]
-name = "schema"
+name = "schedule24"
 version = "0.1.0"
 edition = "2018"
 authors = [ "NAHFE", "Not4x3l" ]
-description = "Show the skola24 schema in different ways"
+description = "Show the skola24 schedules in different ways"
 
 [dependencies]
 chrono = "0.4.19"
@@ -17,4 +17,4 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 confy = "0.4.0"
 
-libschema = { git = "https://github.com/NAHFE/libschema.git", features = ["svg"] }
+libschedule24 = { git = "https://github.com/NAHFE/libschedule24.git", features = ["svg"] }

@@ -912,7 +912,7 @@ checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
 [[package]]
 name = "libschema"
 version = "0.1.0"
-source = "git+https://github.com/NAHFE/libschema.git#c8f7ef4e5dd917c0a38f19ddfcbd98b332ad5184"
+source = "git+https://github.com/NAHFE/libschema.git#ec40b63799dda6181308de5ea49730f4e726b29d"
 dependencies = [
  "async-attributes",
  "async-std",

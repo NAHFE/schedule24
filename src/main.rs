@@ -33,6 +33,9 @@ async fn main() {
 
 async fn run_commands() -> Result<(), RequestError> {
     let cfg: Config = confy::load(env!("CARGO_PKG_NAME")).unwrap();
+    if cfg.domain.is_empty() || cfg.school.is_empty() || cfg.class.is_empty() {
+        println!("You should probably add the domain, school and class to the config file which should be at $XDG_CONFIG_HOME/{0}/{0}.toml", env!("CARGO_PKG_NAME"));
+    }
 
     let day_arg = Arg::with_name("day")
         .short("d")
@@ -129,7 +132,7 @@ async fn run_commands() -> Result<(), RequestError> {
         .arg(Arg::with_name("no-cache")
                 .long("no-cache")
                 .takes_value(false)
-                .help("Disable cachce"))
+                .help("Disable cache"))
         .get_matches();
 
     let should_cache = if matches.is_present("no-cache") { false } else { cfg.cache };
